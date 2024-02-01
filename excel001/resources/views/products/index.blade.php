@@ -16,12 +16,12 @@
             <a class="btn btn-primary btn-lg" href="{{route('importProductIndex')}}">
                 Siguiente
             </a>
-           <!--  <a class="btn btn-secondary me-2" href="{{route('exportProduct')}}">
+         <a class="btn btn-secondary me-2" href="{{route('exportProduct')}}">
                 Export
             </a>
             <a class="btn btn-primary" href="{{route('products.create')}}">
                 Create
-            </a> -->
+            </a>
         </div>
     </div>
 
