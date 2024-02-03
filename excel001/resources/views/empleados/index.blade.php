@@ -14,15 +14,10 @@
             <h4 class="mb-0">Empleados XLSX</h4>
         </div>
       <div class="col-md-6 text-md-end">
-            <a class="btn btn-success me-2" href="{{route('importEmpleadoIndex')}}">
-                Import
+      <a class="btn btn-primary btn-lg" href="/comparancia">
+                Siguiente
             </a>
-            <a class="btn btn-secondary me-2" href="{{route('exportProduct')}}">
-                Export
-            </a>
-            <a class="btn btn-primary" href="{{route('empleados.create')}}">
-                Create
-            </a>
+       
         </div> 
     </div>
 

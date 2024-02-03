@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Exports\ProductsExport;
 use App\Imports\ProductsImport;
+use App\Imports\EnrolamientoImport;
 use App\Imports\EmplingresioImport;
+use App\Imports\HorariosImport;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -18,7 +20,17 @@ class MasterController extends Controller
     {
         return view('empleados.import');
     }
-
+  
+    public function importEnrolamientoIndex()
+    {
+        return view('enrolamiento.import');
+    }
+  
+    public function importHorariosIndex()
+    {
+        return view('horarios.import');
+    }
+  
     ///////////////////////////////////////////////////
 
     public function importProduct(Request $request)
@@ -30,7 +42,7 @@ class MasterController extends Controller
         $file = $request->file('file');
 
         Excel::import(new ProductsImport, $file);
-        toastr()->success('Products imported');
+        toastr()->success('Empleados importados con éxito');
         return redirect()->route('products.index');
     }
 
@@ -44,9 +56,39 @@ class MasterController extends Controller
         $file = $request->file('file');
 
         Excel::import(new EmplingresioImport, $file);
-        toastr()->success('Empleados imported');
+        toastr()->success('Empleados importados con éxito');
         return redirect()->route('empleados.index');
     }
+/* FUNCION IMPORTAR ENROLAMIENTOS */
+    public function importEnrolamiento(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|mimes:xlsx,xls,csv',
+        ]);
+
+        $file = $request->file('file');
+
+        Excel::import(new HorariosImport, $file);
+        toastr()->success('Empleados importados con éxito');
+        return redirect()->route('enrolamiento.index');
+    }
+
+/* FUNCION IMPORTAR ENROLAMIENTOS */
+public function importHorarios(Request $request)
+{
+    $request->validate([
+        'file' => 'required|mimes:xlsx,xls,csv',
+    ]);
+
+    $file = $request->file('file');
+
+    Excel::import(new HorariosImport, $file);
+    toastr()->success('Empleados importados con éxito');
+    return redirect()->route('horarios.index');
+}
+
+
+
 
 
     public function exportProduct()

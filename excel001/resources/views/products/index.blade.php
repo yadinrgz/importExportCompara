@@ -10,18 +10,18 @@
 <div class="container mt-5">
     <div class="row align-items-center g-3 mb-3">
         <div class="col-md-6">
-            <h4 class="mb-0">Empleados</h4>
+            <h4 class="mb-0">Empleados.csv </h4>
         </div>
         <div class="col-md-6 text-md-end">
-            <a class="btn btn-primary btn-lg" href="{{route('importProductIndex')}}">
+            <a class="btn btn-primary btn-lg" href="{{route('importEmpleadoIndex')}}">
                 Siguiente
             </a>
-         <a class="btn btn-secondary me-2" href="{{route('exportProduct')}}">
+        <!--  <a class="btn btn-secondary me-2" href="{{route('exportProduct')}}">
                 Export
             </a>
             <a class="btn btn-primary" href="{{route('products.create')}}">
                 Create
-            </a>
+            </a> -->
         </div>
     </div>
 
