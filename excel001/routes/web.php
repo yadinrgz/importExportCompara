@@ -46,7 +46,6 @@ Route::get('comparancia', [CompararTablasController::class,'comparancia']);
 Route::get('exportar-excel', 'CompararTablasController@exportarExcel')->name('exportar.excel');
  */
 Route::get('enrolados', [CompararTablasController::class,'enrolados']);
-
 Route::get('/resultados/enrolados', 'EnrolamientoController@index');
 
 /* RUTA DE HORARIOS */
@@ -54,3 +53,5 @@ Route::resource('horarios', HorariosController::class)->except('show');
 
 Route::get('horarios/import/index', [MasterController::class, 'importHorariosIndex'])->name('importHorariosIndex');
 Route::post('horarios/import', [MasterController::class, 'importHorarios'])->name('importHorarios');
+
+Route::get('horancia', [CompararTablasController::class,'horancia']);
