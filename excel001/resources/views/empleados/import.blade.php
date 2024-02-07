@@ -1,8 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Import Empleado')
 @section('content')
+<div class="content-wrapper">
+<div class="container card mt-5">
+<div class="card-body">
 
-<div class="container mt-5">
 <h3>ALTAS Y BAJAS</h3>
       <p>Este proceso compara las Altas y Bajas entre el documento de Eslabon "B.xlsx" vs "Empleado.csv" de INGRESSIO </p>
       <h4>Instrucciones</h4>
@@ -30,6 +32,8 @@
             <button class="btn btn-primary" type="submit">Importar</button>
         </div>
     </form>
+</div>
+</div>
 </div>
 
 @endsection

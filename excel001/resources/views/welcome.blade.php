@@ -125,7 +125,7 @@
 								<div class="single-list-topics-icon">
 									<img src="assets/img/003-reloj.png">
 								</div>
-								<h2><a href="#">% DE ASIGNACIÓN DE HORARIOS</a></h2>
+								<h2><a href="/horarios/import/index">% DE ASIGNACIÓN DE HORARIOS</a></h2>
 								</div>
 						</li>
 						<li>
@@ -141,7 +141,7 @@
 								<div class="single-list-topics-icon">
 									<img src="assets/img/005-comprobado.png">
 								</div>
-								<h2><a href="#">REPORTE DE INCIDENCIAS</a></h2>
+								<h2><a href="incidencias/import/index">REPORTE DE INCIDENCIAS</a></h2>
 								</div>
 						</li>
 					</ul>

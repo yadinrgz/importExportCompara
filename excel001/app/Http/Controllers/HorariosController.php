@@ -12,7 +12,7 @@ class HorariosController extends Controller
      */
     public function index()
     {
-        $horarios = Horarios::orderBy('id', 'desc')->paginate(10);
+        $horarios = Horarios::orderBy('id', 'desc')->paginate(50);
         return view('horarios.index', compact('horarios'))
             ->with('i', (request()->input('page', 1) - 1) * 10);
     }

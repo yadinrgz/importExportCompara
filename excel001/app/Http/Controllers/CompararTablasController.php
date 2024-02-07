@@ -81,16 +81,23 @@ class CompararTablasController extends Controller
  
         // Calcular el total de registros diferentes.
         $totalRegistrosDiferentes_Hr = $diferencias_hr->count();
+
+        // Calcular el total de registros iguales.
+        $totalRegistrosIguales_Hr = $totalRegistrosComparados_Hr - $totalRegistrosDiferentes_Hr;
  
         // Calcular el porcentaje de registros diferentes.
         $porcentajeRegistrosDiferentes_Hr = round(($totalRegistrosDiferentes_Hr / $totalRegistrosComparados_Hr) * 100, 2);
+        // Calcular el porcentaje de registros Iguales.
+        $porcentajeRegistrosIguales_Hr = round(($totalRegistrosIguales_Hr / $totalRegistrosComparados_Hr) * 100, 2);
 
         //
         return view('resultados.horarios', compact(
             'empleadosSinHr',
             'totalRegistrosComparados_Hr',
+            'totalRegistrosIguales_Hr',
             'totalRegistrosDiferentes_Hr',
-            'porcentajeRegistrosDiferentes_Hr'
+            'porcentajeRegistrosDiferentes_Hr',
+            'porcentajeRegistrosIguales_Hr'
         ));
 
 }

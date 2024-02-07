@@ -1,17 +1,16 @@
 @extends('layouts.app')
-@section('title', 'Enrolamiento')
+@section('title', 'Incidencias')
 @section('content')
-
 <div class="content-wrapper">
 <div class="container card mt-5">
 <div class="card-body">
     <div class="row align-items-center g-3 mb-3">
         <div class="col-md-6">
-            <h4 class="mb-0">ENROLAMIENTOS</h4>
+            <h4 class="mb-0">Incidencias</h4>
         </div>
         <div class="col-md-6 text-md-end">
-            <a class="btn btn-success me-2" href="{{route('importEnrolamientoIndex')}}">
-                Import</a>
+            <a class="btn btn-success me-2" href="{{route('importIncidenciasIndex')}}">
+                Importar</a>
         </div>
     </div>
 
@@ -25,19 +24,18 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($enrolamientos as $enrolamiento)
+                @foreach($incidencias as $incidencia)
                 <tr>
-                    <td>{{$enrolamiento->numbemp_bio}}</td>
-                    <td>{{$enrolamiento->name_bio}}</td>
-                    <td>{{$enrolamiento->rostro_bio}}</td>
+                    <td>{{$incidencia->numemp_in}}</td>
+                
                   
                 </tr>
                 @endforeach
             </tbody>
         </table>
-        @if($enrolamientos instanceof \Illuminate\Pagination\LengthAwarePaginator)
+        @if($incidencias instanceof \Illuminate\Pagination\LengthAwarePaginator)
         <div class="mt-4">
-            {!! $enrolamientos->links() !!}
+            {!! $incidencias->links() !!}
         </div>
         @endif
     </div>

@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
+<div class="content-wrapper">
+<div class="container card mt-5">
+<div class="card-body">
 
 <h3>Comparación de tablas no concordantes</h3> 
 
@@ -140,5 +143,7 @@ function exportTableToExcel(tableId, filename) {
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.3/xlsx.full.min.js"></script>
+</div>
+</div>
 </div>
 @endsection

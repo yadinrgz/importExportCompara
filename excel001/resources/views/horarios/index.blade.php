@@ -1,8 +1,9 @@
 @extends('layouts.app')
 @section('title', 'Horarios')
 @section('content')
-
-<div class="container mt-5">
+<div class="content-wrapper">
+<div class="container card mt-5">
+<div class="card-body">
     <div class="row align-items-center g-3 mb-3">
         <div class="col-md-6">
             <h4 class="mb-0">Horarios</h4>
@@ -38,6 +39,8 @@
         </div>
         @endif
     </div>
+</div>
+</div>
 </div>
 
 @endsection

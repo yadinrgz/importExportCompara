@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CompararTablasController;
 use App\Http\Controllers\EnrolamientoController;
 use App\Http\Controllers\HorariosController;
+use App\Http\Controllers\IncidenciasController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -50,8 +51,11 @@ Route::get('/resultados/enrolados', 'EnrolamientoController@index');
 
 /* RUTA DE HORARIOS */
 Route::resource('horarios', HorariosController::class)->except('show');
-
 Route::get('horarios/import/index', [MasterController::class, 'importHorariosIndex'])->name('importHorariosIndex');
 Route::post('horarios/import', [MasterController::class, 'importHorarios'])->name('importHorarios');
-
 Route::get('horancia', [CompararTablasController::class,'horancia']);
+
+/* RUTAS INCIDENCIAS */
+Route::resource('incidencias', IncidenciasController::class)->except('show');
+Route::get('incidencias/import/index', [MasterController::class, 'importIncidenciasIndex'])->name('importIncidenciasIndex');
+Route::post('incidencias/import', [MasterController::class, 'importIncidencias'])->name('importIncidencias');

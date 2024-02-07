@@ -37,6 +37,21 @@
                             % enrolamiento
                         </a>
                     </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{route('importHorariosIndex')}}">
+                            Asignación de horarios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{route('importEnrolamientoIndex')}}">
+                            Lectores Activos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{route('importIncidenciasIndex')}}">
+                            Reporte de Incidencias
+                        </a>
+                    </li>
                 </ul> 
             </div>
         </div>

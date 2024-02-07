@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="content-wrapper">
+<div class="container card mt-5">
+<div class="card-body">
 
 <h3>Empleados sin asignación de Horario</h3> 
 
@@ -8,7 +10,7 @@
 <div>
 
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-2">
     <div class="card text-white bg-primary mb-3">
       <div class="card-header">Total de registros comparados</div>
       <div class="card-body">
@@ -16,30 +18,46 @@
       </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-2">
     <div class="card text-white bg-warning mb-3">
-      <div class="card-header">Total de registros diferentes</div>
+      <div class="card-header">Total Sin asignación de horario</div>
       <div class="card-body">
         <h1 class="card-title">{{ $totalRegistrosDiferentes_Hr }}</h1>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-2">
+    <div class="card text-white bg-secondary mb-3">
+      <div class="card-header">Total Con asignación de horario</div>
+      <div class="card-body">
+        <h1 class="card-title">{{ $totalRegistrosIguales_Hr }}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2">
     <div class="card text-white bg-danger mb-3">
-      <div class="card-header">Porcentaje de registros diferentes</div>
+      <div class="card-header">Porcentaje Sin Asignación</div>
       <div class="card-body">
         <h1 class="card-title">{{ $porcentajeRegistrosDiferentes_Hr }}%</h1>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
-    <div class="card text-white bg-light mb-3">
+  <div class="col-md-2">
+    <div class="card text-white bg-info mb-3">
+      <div class="card-header">Porcentaje Con Asignación</div>
+      <div class="card-body">
+        <h1 class="card-title">{{ $porcentajeRegistrosIguales_Hr}}%</h1>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="card text-white bg-light">
       <div class="card-body">
       <?php
     // Botón para exportar a XLSX
     
-    echo '<div class="col-12 m-2"><button class="btn btn-primary btn-lg" onclick="exportToXlsx()">Exportar a XLSX</button></div>';
-    echo '<div class="col-12 m-2"><button class="btn btn-success btn-lg" onclick="exportar()">Exportar a PDF</button></div>';
+    echo '<div class="col-12 "><button class="btn btn-primary btn-lg" onclick="exportToXlsx()">Exportar a XLSX</button></div>';
+    echo '<div class="col-12 mt-2"><button class="btn btn-success btn-lg" onclick="exportar()">Exportar a PDF</button></div>';
 
     ?>
       </div>
@@ -134,5 +152,7 @@ function exportTableToExcel(tableId, filename) {
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.3/xlsx.full.min.js"></script>
+</div>
+</div>
 </div>
 @endsection
