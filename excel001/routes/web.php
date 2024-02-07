@@ -7,6 +7,8 @@ use App\Http\Controllers\CompararTablasController;
 use App\Http\Controllers\EnrolamientoController;
 use App\Http\Controllers\HorariosController;
 use App\Http\Controllers\IncidenciasController;
+use App\Http\Controllers\ProtController;
+use App\Models\Prot;
 use Illuminate\Support\Facades\Route;
 
 
@@ -28,7 +30,6 @@ Route::get('products/import/index', [MasterController::class, 'importProductInde
 Route::post('products/import', [MasterController::class, 'importProduct'])->name('importProduct');
 Route::get('products/export', [MasterController::class, 'exportProduct'])->name('exportProduct');
 
-
 Route::resource('empleados', EmplingresioController::class)->except('show');
 Route::get('empleados/import/index', [MasterController::class, 'importEmpleadoIndex'])->name('importEmpleadoIndex');
 Route::post('empleados/import', [MasterController::class, 'importEmpleado'])->name('importEmpleado');
@@ -37,7 +38,6 @@ Route::get('empleados/export', [MasterController::class, 'exportEmpleado'])->nam
 Route::resource('enrolamiento', EnrolamientoController::class)->except('show');
 Route::get('enrolamiento/import/index', [MasterController::class, 'importEnrolamientoIndex'])->name('importEnrolamientoIndex');
 Route::post('enrolamiento/import', [MasterController::class, 'importEnrolamiento'])->name('importEnrolamiento');
-
 
 
 //Route::get('altasybajas', [CompararTablasController::class,'index']);
@@ -59,3 +59,8 @@ Route::get('horancia', [CompararTablasController::class,'horancia']);
 Route::resource('incidencias', IncidenciasController::class)->except('show');
 Route::get('incidencias/import/index', [MasterController::class, 'importIncidenciasIndex'])->name('importIncidenciasIndex');
 Route::post('incidencias/import', [MasterController::class, 'importIncidencias'])->name('importIncidencias');
+
+/* RUTAS LECTORES */
+Route::resource('lectores', ProtController::class)->except('show');
+Route::get('lectores/import/index', [MasterController::class, 'importProtIndex'])->name('importProtIndex');
+Route::post('lectores/import', [MasterController::class, 'importProt'])->name('importProt');

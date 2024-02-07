@@ -133,7 +133,7 @@
 								<div class="single-list-topics-icon">
 									<img src="assets/img/004-deteccion-de-rostro.png">
 								</div>
-								<h2><a href="#">% DE LECTORES ACTIVOS</a></h2>
+								<h2><a href="lectores">% DE LECTORES ACTIVOS</a></h2>
 									</div>
 						</li>
 						<li>

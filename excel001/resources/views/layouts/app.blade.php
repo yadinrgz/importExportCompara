@@ -43,8 +43,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="{{route('importEnrolamientoIndex')}}">
-                            Lectores Activos
+                    <a class="nav-link" href="{{url('lectores')}}">
+                        Lectores
                         </a>
                     </li>
                     <li class="nav-item">

@@ -5,7 +5,7 @@
 <div class="content-wrapper">
 <div class="container card mt-5">
 <div class="card-body">
-<h3>Lectores activos</h3>
+<h3>% de Enrolamiento</h3>
       <p>Este proceso compara los colaboradores dados de alta en el sistema para comprobar si ya han sido registrados en el checador biométrico </p>
       <h4>Instrucciones</h4>
 

@@ -8,6 +8,7 @@ use App\Imports\EnrolamientoImport;
 use App\Imports\EmplingresioImport;
 use App\Imports\HorariosImport;
 use App\Imports\IncidenciasImport;
+use App\Imports\ProtImport;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -34,6 +35,11 @@ class MasterController extends Controller
     public function importIncidenciasIndex()
     {
         return view('incidencias.import');
+    }
+  
+    public function importProtIndex()
+    {
+        return view('lectores.import');
     }
   
     ///////////////////////////////////////////////////
@@ -90,6 +96,19 @@ public function importHorarios(Request $request)
     Excel::import(new HorariosImport, $file);
     toastr()->success('Empleados importados con éxito');
     return redirect()->route('horarios.index');
+}
+/* FUNCION IMPORTAR LE4CVTOREDS */
+public function importProt(Request $request)
+{
+    $request->validate([
+        'file' => 'required|mimes:xlsx,xls,csv',
+    ]);
+
+    $file = $request->file('file');
+
+    Excel::import(new ProtImport, $file);
+    toastr()->success('Empleados importados con éxito');
+    return redirect()->route('lectores.index');
 }
 
 /* FUNCION IMPORTAR INCIDENCIAS */
